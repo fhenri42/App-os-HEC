@@ -1,0 +1,2 @@
+# App-os-HEC
+We are working on an application for smartphones that gathers events and displays them in a  very simple manner, by prioritizing the ones nearest to you and beginning soon (within the next   12hrs). With the swipe of a finger, you can nonchalantly (or energetically, depending on your   mood) choose which you like and which you dislike. Then for the ones you “liked” you can see   the location, how to get there, and which of your facebook friends are also attending.
