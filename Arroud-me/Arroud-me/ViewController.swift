@@ -87,6 +87,14 @@ class ViewController: UIViewController {
      
     }
    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if (segue.identifier == "segueTest") {
+ //           var svc = segue!.destinationViewController as secondViewController
+            
+//            svc.toPass = textField.text
+            
+        }
+    }
     @IBAction func like_func(sender: AnyObject)
     {
         
