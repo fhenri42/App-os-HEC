@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -37,20 +38,53 @@
                                     <action selector="like_func:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kdb-3L-gz5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgres-1" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-m5-9Sh">
-                                <rect key="frame" x="180" y="192" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-ia-cj5">
+                                <rect key="frame" x="146" y="225" width="240" height="128"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ib-rZ-N20">
+                                <rect key="frame" x="43" y="119" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AfP-gb-wO6">
+                                <rect key="frame" x="200" y="400" width="42" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-6m-IQd">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-5X-1xD">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qg-uN-Q48">
+                                <rect key="frame" x="172" y="484" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AfP-gb-wO6" secondAttribute="bottom" constant="179" id="39H-rV-K1a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOZ-ia-cj5" secondAttribute="bottom" constant="247" id="CtG-K2-Ohx"/>
+                            <constraint firstItem="VOZ-ia-cj5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="161" id="LYm-JF-Jgv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AfP-gb-wO6" secondAttribute="trailing" constant="338" id="PGF-hN-gJp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pLW-yC-nRT" secondAttribute="bottom" constant="176" id="VId-Pa-v3T"/>
                             <constraint firstItem="pLW-yC-nRT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="330" id="WLM-BG-Ye9"/>
+                            <constraint firstItem="AfP-gb-wO6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="180" id="ZMN-9T-uv6"/>
+                            <constraint firstItem="AfP-gb-wO6" firstAttribute="top" secondItem="VOZ-ia-cj5" secondAttribute="bottom" constant="47" id="dTh-8q-n91"/>
+                            <constraint firstItem="VOZ-ia-cj5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jVB-xC-yNH"/>
+                            <constraint firstItem="VOZ-ia-cj5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zsC-2k-cfP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iWp-wM-Iv4">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0bE-GR-aNM">
-                            <rect key="frame" x="254" y="7" width="93" height="30"/>
+                            <rect key="frame" x="253.5" y="7" width="93" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Go to favorite"/>
                             <connections>
@@ -62,8 +96,10 @@
                     <connections>
                         <outlet property="Dislike" destination="pLW-yC-nRT" id="yym-6S-6Eb"/>
                         <outlet property="Like" destination="5Ii-m8-ZTD" id="PMo-OS-zCC"/>
+                        <outlet property="Myimage" destination="VOZ-ia-cj5" id="fUD-qm-Uxa"/>
                         <outlet property="Next" destination="0bE-GR-aNM" id="dkN-bb-EhX"/>
-                        <outlet property="image" destination="E1g-m5-9Sh" id="mAf-YM-oPA"/>
+                        <outlet property="eventInfo" destination="1qg-uN-Q48" id="CYH-Mi-0So"/>
+                        <outlet property="eventTitle" destination="9Ib-rZ-N20" id="AVa-oH-KUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,7 +152,4 @@
             <point key="canvasLocation" x="182" y="357"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imgres-1" width="300" height="168"/>
-    </resources>
 </document>
