@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A85DD1CDB6F44000318A9 /* LoginControleur.swift */; };
 		7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722647291CD6597700B86DB8 /* SecondViewController.swift */; };
 		724CD6651CD653D900707362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6641CD653D900707362 /* AppDelegate.swift */; };
 		724CD6671CD653D900707362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6661CD653D900707362 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		720A85DD1CDB6F44000318A9 /* LoginControleur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControleur.swift; sourceTree = "<group>"; };
 		722647291CD6597700B86DB8 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		724CD6611CD653D900707362 /* Arroud-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arroud-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		724CD6641CD653D900707362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				72FA8A2C1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework */,
 				724CD6641CD653D900707362 /* AppDelegate.swift */,
 				722647291CD6597700B86DB8 /* SecondViewController.swift */,
+				720A85DD1CDB6F44000318A9 /* LoginControleur.swift */,
 				724CD6661CD653D900707362 /* ViewController.swift */,
 				724CD6681CD653D900707362 /* Main.storyboard */,
 				724CD66B1CD653D900707362 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 			files = (
 				7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */,
 				724CD6671CD653D900707362 /* ViewController.swift in Sources */,
+				720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */,
 				724CD6651CD653D900707362 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

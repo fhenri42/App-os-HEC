@@ -10,11 +10,11 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController{
 
     
-
-    @IBOutlet var loginButton: FBSDKLoginButton!
+/* FBSDKLoginButtonDelegate */
+    
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventInfo: UILabel!
     @IBOutlet var Like: UIButton!
@@ -30,12 +30,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         eventTitle.text = "event01"
         eventInfo.text = "blabalbalbal01"
         super.viewDidLoad()
-      //  loginButton.center = self.view.center
-        loginButton.readPermissions = ["email"]
-        self.view.addSubview(loginButton)
-        loginButton.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
+              // Do any additional setup after loading the view, typically from a nib.
     }
+    
     func logUserData ()
     {
         let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
@@ -52,14 +49,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
-    {
-        print("logged in")
-    }
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
-    {
-        print("logg out")
-    }
+
     
     func doSomeTaskForButton()
     {

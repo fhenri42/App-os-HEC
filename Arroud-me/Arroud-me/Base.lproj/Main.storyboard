@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VsF-3T-sca">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HUp-K7-51M">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -60,10 +60,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VOZ-ia-cj5">
                                 <rect key="frame" x="0.0" y="141" width="600" height="318"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-zk-Bdy" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="277" y="64" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,8 +76,6 @@
                             <constraint firstItem="VOZ-ia-cj5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Vug-yW-KUz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pLW-yC-nRT" secondAttribute="trailing" id="XW0-NN-tjY"/>
                             <constraint firstItem="9Ib-rZ-N20" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="bkL-AQ-hOQ"/>
-                            <constraint firstItem="9Ib-rZ-N20" firstAttribute="top" secondItem="MkN-zk-Bdy" secondAttribute="bottom" constant="-22" id="fg9-xi-jZx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MkN-zk-Bdy" secondAttribute="trailing" constant="60" id="gx2-u4-ZXg"/>
                             <constraint firstItem="9Ib-rZ-N20" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hYe-TY-KiV"/>
                             <constraint firstItem="1qg-uN-Q48" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="r8S-pB-yNG"/>
                             <constraint firstItem="VOZ-ia-cj5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uoQ-Kq-xWO"/>
@@ -108,12 +102,11 @@
                         <outlet property="Next" destination="0bE-GR-aNM" id="dkN-bb-EhX"/>
                         <outlet property="eventInfo" destination="1qg-uN-Q48" id="CYH-Mi-0So"/>
                         <outlet property="eventTitle" destination="9Ib-rZ-N20" id="AVa-oH-KUa"/>
-                        <outlet property="loginButton" destination="MkN-zk-Bdy" id="gH2-q2-dyX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811" y="317"/>
+            <point key="canvasLocation" x="-142" y="83"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Hrm-VD-CBL">
@@ -237,7 +230,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXa-SR-ShA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="365"/>
+            <point key="canvasLocation" x="617" y="83"/>
+        </scene>
+        <!--Login Controleur-->
+        <scene sceneID="MDR-lS-a6b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yss-ov-qDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="HUp-K7-51M" customClass="LoginControleur" customModule="Arroud_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n7k-wH-Db0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y1t-31-i5k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SyF-PT-U6R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du5-Lr-v67" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWA-6Z-4Yg">
+                                <rect key="frame" x="270" y="420" width="60" height="30"/>
+                                <state key="normal" title="Get out !"/>
+                                <connections>
+                                    <segue destination="VsF-3T-sca" kind="modal" id="hk5-nd-Y1W"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cfI-ES-Rty">
+                                <rect key="frame" x="213" y="70" width="174" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="Gxu-DT-VNh"/>
+                                    <constraint firstAttribute="width" constant="174" id="ngY-xE-Xfj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z3-jO-A1f">
+                                <rect key="frame" x="300" y="231" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cfI-ES-Rty" firstAttribute="top" secondItem="n7k-wH-Db0" secondAttribute="bottom" constant="50" id="5nO-oy-E24"/>
+                            <constraint firstItem="cfI-ES-Rty" firstAttribute="centerX" secondItem="du5-Lr-v67" secondAttribute="centerX" id="7EC-G7-0sQ"/>
+                            <constraint firstItem="du5-Lr-v67" firstAttribute="centerY" secondItem="SyF-PT-U6R" secondAttribute="centerY" id="IFL-JH-GeF"/>
+                            <constraint firstItem="cfI-ES-Rty" firstAttribute="centerX" secondItem="SWA-6Z-4Yg" secondAttribute="centerX" id="IPe-QF-Y3s"/>
+                            <constraint firstItem="cfI-ES-Rty" firstAttribute="centerX" secondItem="SyF-PT-U6R" secondAttribute="centerX" id="a26-RP-8DE"/>
+                            <constraint firstItem="6z3-jO-A1f" firstAttribute="top" secondItem="cfI-ES-Rty" secondAttribute="bottom" constant="50" id="hTn-4Y-4Kz"/>
+                            <constraint firstItem="Y1t-31-i5k" firstAttribute="top" secondItem="SWA-6Z-4Yg" secondAttribute="bottom" constant="150" id="j3t-ZB-CFm"/>
+                            <constraint firstItem="cfI-ES-Rty" firstAttribute="centerX" secondItem="6z3-jO-A1f" secondAttribute="centerX" id="jtb-Po-q0v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4qP-6a-L4y"/>
+                    <connections>
+                        <outlet property="ivUserProfileImage" destination="cfI-ES-Rty" id="QXs-jY-EOI"/>
+                        <outlet property="lblName" destination="6z3-jO-A1f" id="qPl-sP-VRF"/>
+                        <outlet property="loginButton" destination="du5-Lr-v67" id="48t-3M-rkt"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-208" y="-1037"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7jS-dg-YRL">
@@ -255,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQ3-bj-1EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="357"/>
+            <point key="canvasLocation" x="-934" y="88"/>
         </scene>
     </scenes>
 </document>
