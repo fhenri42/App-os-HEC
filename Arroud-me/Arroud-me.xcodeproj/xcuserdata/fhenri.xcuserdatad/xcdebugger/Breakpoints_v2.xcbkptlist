@@ -10,11 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Arroud-me/ViewController.swift"
-            timestampString = "483814338.400233"
+            timestampString = "484134639.814618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "doSomeTaskForButton()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     
+
+    @IBOutlet var loginButton: FBSDKLoginButton!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventInfo: UILabel!
     @IBOutlet var Like: UIButton!
@@ -26,7 +30,35 @@ class ViewController: UIViewController {
         eventTitle.text = "event01"
         eventInfo.text = "blabalbalbal01"
         super.viewDidLoad()
+      //  loginButton.center = self.view.center
+        loginButton.readPermissions = ["email"]
+        self.view.addSubview(loginButton)
+        loginButton.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    func logUserData ()
+    {
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.startWithCompletionHandler{(connection, result, error)-> Void in
+            if error != nil
+            {
+                print(error)
+                
+            }
+            else
+            {
+            print(result.grantedPermissions)
+            }
+        }
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
+    {
+        print("logged in")
+    }
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
+    {
+        print("logg out")
     }
     
     func doSomeTaskForButton()
@@ -87,14 +119,7 @@ class ViewController: UIViewController {
      
     }
    
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier == "segueTest") {
- //           var svc = segue!.destinationViewController as secondViewController
-            
-//            svc.toPass = textField.text
-            
-        }
-    }
+
     @IBAction func like_func(sender: AnyObject)
     {
         
@@ -108,6 +133,8 @@ class ViewController: UIViewController {
         doSomeTaskForButton()
         x+=1
     }
+      /* override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)     {         if (segue.identifier == "segueTest")         {             let second = (segue.destinationViewController as! SecondViewController)                         let user = self.Like             second.like = user              //           var svc = segue!.destinationViewController as secondViewController                      }     } */
+    
     
     @IBAction func goback_func(sender: AnyObject)
     {
