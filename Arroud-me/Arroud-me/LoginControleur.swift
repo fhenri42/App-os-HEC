@@ -16,6 +16,10 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
     @IBOutlet var ivUserProfileImage: UIImageView!
     @IBOutlet var loginButton: FBSDKLoginButton!
     @IBOutlet var lblName: UILabel!
+    @IBOutlet var info: UILabel!
+    
+    var loggedIn : Bool = false
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -25,6 +29,14 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
     
         
         // Do any additional setup after loading the view.
+    }
+  
+    override func viewDidAppear(animated: Bool)
+    {
+        if (loggedIn)
+        {
+            performSegueWithIdentifier("loggedInSegue", sender: nil)
+        }
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
@@ -39,36 +51,34 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
                     let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
                     self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
                     self.ivUserProfileImage.layer.masksToBounds = true
-                    self.ivUserProfileImage.layer.cornerRadius = CGRectGetWidth(self.ivUserProfileImage.frame) / 4
+                    self.ivUserProfileImage.layer.cornerRadius = CGRectGetWidth(self.ivUserProfileImage.frame) / 2
                     self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
-                   
-                    }
+                    self.loggedIn = true
+            } }
+        
+          /*  let event =  FBSDKGraphRequest (graphPath: "me/life-event-id", parameters: nil)
+            event.startWithCompletionHandler{(connection, result, error) -> Void in
             
-
-            
-        }
+                
+                
+                  FBSDKGraphRequest.init(graphPath: "me/life-event-id", parameters: ["fields":"created_time, description, end_time"]).startWithCompletionHandler { (connection, result, error) -> Void in
+                    let strFirst: String = (result.objectForKey("created_time") as? String)!
+                     self.info.text = (strFirst)
+                    
+                }
+        } */
         print("logged in")
     }
+    
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
     {
         print("logg out")
     }
- 
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

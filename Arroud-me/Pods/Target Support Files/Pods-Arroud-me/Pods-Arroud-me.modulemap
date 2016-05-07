@@ -1,0 +1,6 @@
+framework module Pods_Arroud_me {
+  umbrella header "Pods-Arroud-me-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61E99EDC647479321469BB6E /* Pods_Arroud_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEBEE05CB469C43C3F2F845 /* Pods_Arroud_me.framework */; };
+		7208FB0E1CDCD571003940A9 /* Favori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208FB0D1CDCD571003940A9 /* Favori.swift */; };
 		720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A85DD1CDB6F44000318A9 /* LoginControleur.swift */; };
 		7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722647291CD6597700B86DB8 /* SecondViewController.swift */; };
 		724CD6651CD653D900707362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6641CD653D900707362 /* AppDelegate.swift */; };
@@ -16,6 +18,9 @@
 		724CD66F1CD653D900707362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724CD66D1CD653D900707362 /* LaunchScreen.storyboard */; };
 		724CD67A1CD653DA00707362 /* Arroud_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6791CD653DA00707362 /* Arroud_meTests.swift */; };
 		724CD6851CD653DA00707362 /* Arroud_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6841CD653DA00707362 /* Arroud_meUITests.swift */; };
+		7268B0B51CDE4642000DDBC0 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7268B0B41CDE4642000DDBC0 /* OverlayView.xib */; };
+		7268B0B71CDE4691000DDBC0 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268B0B61CDE4691000DDBC0 /* ExampleOverlayView.swift */; };
+		728469EC1CDE3C37006C90A1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728469EB1CDE3C37006C90A1 /* TestViewController.swift */; };
 		72FA8A2D1CDB40F40038BD97 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2A1CDB40F40038BD97 /* FBSDKCoreKit.framework */; };
 		72FA8A2E1CDB40F40038BD97 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2B1CDB40F40038BD97 /* FBSDKLoginKit.framework */; };
 		72FA8A2F1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2C1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework */; };
@@ -39,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EEBEE05CB469C43C3F2F845 /* Pods_Arroud_me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arroud_me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C2A9B36A43F19585D600CD /* Pods-Arroud-me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arroud-me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Arroud-me/Pods-Arroud-me.debug.xcconfig"; sourceTree = "<group>"; };
+		7208FB0D1CDCD571003940A9 /* Favori.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favori.swift; sourceTree = "<group>"; };
 		720A85DD1CDB6F44000318A9 /* LoginControleur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControleur.swift; sourceTree = "<group>"; };
 		722647291CD6597700B86DB8 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		724CD6611CD653D900707362 /* Arroud-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arroud-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,9 +62,13 @@
 		724CD6801CD653DA00707362 /* Arroud-meUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arroud-meUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		724CD6841CD653DA00707362 /* Arroud_meUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arroud_meUITests.swift; sourceTree = "<group>"; };
 		724CD6861CD653DA00707362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7268B0B41CDE4642000DDBC0 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		7268B0B61CDE4691000DDBC0 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		728469EB1CDE3C37006C90A1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		72FA8A2A1CDB40F40038BD97 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		72FA8A2B1CDB40F40038BD97 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		72FA8A2C1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		A33CDEB5B37CF01C5DA94133 /* Pods-Arroud-me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arroud-me.release.xcconfig"; path = "Pods/Target Support Files/Pods-Arroud-me/Pods-Arroud-me.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 				72FA8A2E1CDB40F40038BD97 /* FBSDKLoginKit.framework in Frameworks */,
 				72FA8A2F1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				72FA8A2D1CDB40F40038BD97 /* FBSDKCoreKit.framework in Frameworks */,
+				61E99EDC647479321469BB6E /* Pods_Arroud_me.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ACD04593A0C3B0852E8931B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EEBEE05CB469C43C3F2F845 /* Pods_Arroud_me.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		724CD6581CD653D900707362 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +115,8 @@
 				724CD6781CD653DA00707362 /* Arroud-meTests */,
 				724CD6831CD653DA00707362 /* Arroud-meUITests */,
 				724CD6621CD653D900707362 /* Products */,
+				D1410C32B3E8A8ABD0A97540 /* Pods */,
+				2ACD04593A0C3B0852E8931B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,10 +140,14 @@
 				722647291CD6597700B86DB8 /* SecondViewController.swift */,
 				720A85DD1CDB6F44000318A9 /* LoginControleur.swift */,
 				724CD6661CD653D900707362 /* ViewController.swift */,
+				7268B0B61CDE4691000DDBC0 /* ExampleOverlayView.swift */,
 				724CD6681CD653D900707362 /* Main.storyboard */,
+				7268B0B41CDE4642000DDBC0 /* OverlayView.xib */,
+				7208FB0D1CDCD571003940A9 /* Favori.swift */,
 				724CD66B1CD653D900707362 /* Assets.xcassets */,
 				724CD66D1CD653D900707362 /* LaunchScreen.storyboard */,
 				724CD6701CD653D900707362 /* Info.plist */,
+				728469EB1CDE3C37006C90A1 /* TestViewController.swift */,
 			);
 			path = "Arroud-me";
 			sourceTree = "<group>";
@@ -143,6 +170,15 @@
 			path = "Arroud-meUITests";
 			sourceTree = "<group>";
 		};
+		D1410C32B3E8A8ABD0A97540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26C2A9B36A43F19585D600CD /* Pods-Arroud-me.debug.xcconfig */,
+				A33CDEB5B37CF01C5DA94133 /* Pods-Arroud-me.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 724CD6891CD653DA00707362 /* Build configuration list for PBXNativeTarget "Arroud-me" */;
 			buildPhases = (
+				917A38404DA7B84BC5A67BC8 /* Check Pods Manifest.lock */,
 				724CD65D1CD653D900707362 /* Sources */,
 				724CD65E1CD653D900707362 /* Frameworks */,
 				724CD65F1CD653D900707362 /* Resources */,
+				96E9844A6E868BE215CA7728 /* Embed Pods Frameworks */,
+				F6943FAECC3915F8E73D3649 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724CD66F1CD653D900707362 /* LaunchScreen.storyboard in Resources */,
+				7268B0B51CDE4642000DDBC0 /* OverlayView.xib in Resources */,
 				724CD66C1CD653D900707362 /* Assets.xcassets in Resources */,
 				724CD66A1CD653D900707362 /* Main.storyboard in Resources */,
 			);
@@ -269,12 +309,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		917A38404DA7B84BC5A67BC8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96E9844A6E868BE215CA7728 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arroud-me/Pods-Arroud-me-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6943FAECC3915F8E73D3649 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arroud-me/Pods-Arroud-me-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		724CD65D1CD653D900707362 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */,
+				7268B0B71CDE4691000DDBC0 /* ExampleOverlayView.swift in Sources */,
+				7208FB0E1CDCD571003940A9 /* Favori.swift in Sources */,
+				728469EC1CDE3C37006C90A1 /* TestViewController.swift in Sources */,
 				724CD6671CD653D900707362 /* ViewController.swift in Sources */,
 				720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */,
 				724CD6651CD653D900707362 /* AppDelegate.swift in Sources */,
@@ -336,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -381,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -417,8 +510,10 @@
 		};
 		724CD68A1CD653DA00707362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26C2A9B36A43F19585D600CD /* Pods-Arroud-me.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Arroud-me",
@@ -432,8 +527,10 @@
 		};
 		724CD68B1CD653DA00707362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33CDEB5B37CF01C5DA94133 /* Pods-Arroud-me.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Arroud-me",

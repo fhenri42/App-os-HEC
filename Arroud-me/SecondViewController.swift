@@ -10,12 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var Table: UITableView!
+    
+
+    
+    var labelText = String ()
+    
     override func viewDidLoad()
     {
+  //      Label.text = labelT
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
