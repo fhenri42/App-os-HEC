@@ -8,6 +8,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
@@ -16,12 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-7I-4P4">
+                                <rect key="frame" x="152" y="196" width="297" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="6Ju-ju-5Vt"/>
+                                    <constraint firstAttribute="height" constant="207" id="Im8-FI-QCf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-8S-pIr">
+                                <rect key="frame" x="189" y="545" width="223" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="Pn5-EG-xUJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ah1-7I-4P4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Dis-Bw-cEG"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zdF-8S-pIr" secondAttribute="bottom" constant="34" id="apX-se-dWG"/>
+                            <constraint firstItem="Ah1-7I-4P4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gPu-gW-Rxo"/>
+                            <constraint firstItem="Ah1-7I-4P4" firstAttribute="centerX" secondItem="zdF-8S-pIr" secondAttribute="centerX" id="oCc-Fb-eMw"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-159" y="509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="250" height="175"/>
+    </resources>
 </document>

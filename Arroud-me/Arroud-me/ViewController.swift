@@ -12,22 +12,13 @@ import FBSDKLoginKit
 import Koloda
 
 var y = 0
-private var numberOfCards: UInt = 5
+private var numberOfCards: UInt = 6
 
 class ViewController: UIViewController{
 
     @IBOutlet var kolodaView: KolodaView!
     
-    private var dataSource: Array<UIImage> = {
-        var array: Array<UIImage> = []
-        for index in 0..<numberOfCards {
-            array.append(UIImage(named: "Card_like_\(index + 1)")!)
-        }
-        
-        return array
-    }()
-
-
+   
 /* FBSDKLoginButtonDelegate */
     
     @IBOutlet var TextField: UITextField!
@@ -37,7 +28,7 @@ class ViewController: UIViewController{
     @IBOutlet var Next: UIButton!
     @IBOutlet var Dislike: UIButton!
     @IBOutlet weak var Goback: UIButton!
-    var x = 1
+    var x = -3
     var go = false
     override func viewDidLoad()
     {
@@ -157,21 +148,22 @@ class ViewController: UIViewController{
     @IBAction func like_func(sender: AnyObject)
     {
         go = true
+        kolodaView?.swipe(SwipeResultDirection.Right)
         doSomeTaskForButton()
         y+=1
         x+=1
         
-        kolodaView?.swipe(SwipeResultDirection.Right)
+        
     }
     
     @IBAction func dislike_func(sender: AnyObject)
     {
     
         go = false
+        kolodaView?.swipe(SwipeResultDirection.Left)
         doSomeTaskForButton()
         x+=1
-        
-        kolodaView?.swipe(SwipeResultDirection.Left)
+     
     }
     
     
@@ -185,6 +177,19 @@ class ViewController: UIViewController{
         
         
     }
+    private var dataSource: Array<UIImage> = {
+        var array: Array<UIImage> = []
+        
+        for index in 0..<numberOfCards {
+            array.append(UIImage(named: "Card_like_\(index + 1)")!)
+
+        }
+        
+        return array
+    }()
+    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -195,7 +200,8 @@ class ViewController: UIViewController{
 extension ViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
-        dataSource.insert(UIImage(named: "Card_like_6")!, atIndex: kolodaView.currentCardIndex - 1)
+        
+        dataSource.insert(UIImage(named: "Card_like_1")!, atIndex: kolodaView.currentCardIndex - 1)
         let position = kolodaView.currentCardIndex
         kolodaView.insertCardAtIndexRange(position...position, animated: true)
     }
@@ -209,14 +215,18 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
     
     func kolodaNumberOfCards(koloda:KolodaView) -> UInt {
+
         return UInt(dataSource.count)
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
+      
         return UIImageView(image: dataSource[Int(index)])
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
+         doSomeTaskForButton()
+          x+=1
         return NSBundle.mainBundle().loadNibNamed("OverlayView",
                                                   owner: self, options: nil)[0] as? OverlayView
     }

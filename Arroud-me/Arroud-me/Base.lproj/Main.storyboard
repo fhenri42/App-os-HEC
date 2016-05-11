@@ -130,6 +130,51 @@
             </objects>
             <point key="canvasLocation" x="-278" y="83"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="WUk-1K-DQZ">
+            <objects>
+                <tableViewController id="USC-zb-vg4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDZ-2A-bmT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nAP-lM-BKz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nAP-lM-BKz" id="Lan-Kw-XmX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="USC-zb-vg4" id="3j9-bV-pbv"/>
+                            <outlet property="delegate" destination="USC-zb-vg4" id="rmB-Kf-BKA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="G0F-R6-FH5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvs-1p-33j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1053" y="-753"/>
+        </scene>
+        <!--Side Menu-->
+        <scene sceneID="29X-Z9-zEM">
+            <objects>
+                <navigationController id="rzz-83-rrP" customClass="SideMenu" customModule="Arroud_me" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vhr-4P-x2K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="USC-zb-vg4" kind="relationship" relationship="rootViewController" id="lTd-UG-prh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqF-xr-8Fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1873" y="-753"/>
+        </scene>
         <!--Login Controleur-->
         <scene sceneID="MDR-lS-a6b">
             <objects>
@@ -149,6 +194,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWA-6Z-4Yg">
                                 <rect key="frame" x="270" y="420" width="60" height="30"/>
                                 <state key="normal" title="Get out !"/>
+                                <connections>
+                                    <segue destination="VsF-3T-sca" kind="modal" id="ZZA-D1-72Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z3-jO-A1f">
                                 <rect key="frame" x="300" y="270" width="0.0" height="0.0"/>
@@ -170,7 +218,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cfI-ES-Rty" firstAttribute="top" secondItem="n7k-wH-Db0" secondAttribute="bottom" constant="50" id="5nO-oy-E24"/>
                             <constraint firstItem="cfI-ES-Rty" firstAttribute="centerX" secondItem="du5-Lr-v67" secondAttribute="centerX" id="7EC-G7-0sQ"/>
@@ -248,4 +296,7 @@
             <point key="canvasLocation" x="-935" y="83"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZZA-D1-72Z"/>
+    </inferredMetricsTieBreakers>
 </document>
