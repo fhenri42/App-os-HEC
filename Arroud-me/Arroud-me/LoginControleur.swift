@@ -13,10 +13,13 @@ import FBSDKLoginKit
 class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
 {
 
-    @IBOutlet var ivUserProfileImage: UIImageView!
+   // @IBOutlet var ivUserProfileImage: UIImageView!
+    
+    
+
     @IBOutlet var loginButton: FBSDKLoginButton!
-    @IBOutlet var lblName: UILabel!
-    @IBOutlet var info: UILabel!
+ //   @IBOutlet var lblName: UILabel!
+ //   @IBOutlet var info: UILabel!
     
     var loggedIn : Bool = false
     
@@ -26,9 +29,6 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
         loginButton.readPermissions = ["email"]
         self.view.addSubview(loginButton)
         loginButton.delegate = self
-    
-        
-        // Do any additional setup after loading the view.
     }
   
     override func viewDidAppear(animated: Bool)
@@ -38,35 +38,25 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
             performSegueWithIdentifier("loggedInSegue", sender: nil)
         }
     }
-    
+   
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
-        let graphRequest = FBSDKGraphRequest (graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler{(connection, result, error)-> Void in
+      // let graphRequest = FBSDKGraphRequest (graphPath: "me", parameters: nil)
+     //   graphRequest.startWithCompletionHandler{(connection, result, error)-> Void in
             
          
-                FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
-                    let strFirstName: String = (result.objectForKey("first_name") as? String)!
-                    let strLastName: String = (result.objectForKey("last_name") as? String)!
-                    let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
-                    self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
-                    self.ivUserProfileImage.layer.masksToBounds = true
-                    self.ivUserProfileImage.layer.cornerRadius = CGRectGetWidth(self.ivUserProfileImage.frame) / 2
-                    self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
-                    self.loggedIn = true
-            } }
-        
-          /*  let event =  FBSDKGraphRequest (graphPath: "me/life-event-id", parameters: nil)
-            event.startWithCompletionHandler{(connection, result, error) -> Void in
-            
-                
-                
-                  FBSDKGraphRequest.init(graphPath: "me/life-event-id", parameters: ["fields":"created_time, description, end_time"]).startWithCompletionHandler { (connection, result, error) -> Void in
-                    let strFirst: String = (result.objectForKey("created_time") as? String)!
-                     self.info.text = (strFirst)
-                    
-                }
-        } */
+   //             FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
+    //                let strFirstName: String = (result.objectForKey("first_name") as? String)!
+      //              let strLastName: String = (result.objectForKey("last_name") as? String)!
+        //            let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+         //           self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
+          //          self.ivUserProfileImage.layer.masksToBounds = true
+           //        self.ivUserProfileImage.layer.cornerRadius = CGRectGetWidth(self.ivUserProfileImage.frame) / 2
+               // self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
+          //          self.loggedIn = true
+     //       }
+       // }
+
         print("logged in")
     }
     

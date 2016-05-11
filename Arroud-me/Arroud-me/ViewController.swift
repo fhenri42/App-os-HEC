@@ -14,169 +14,51 @@ import Koloda
 var y = 0
 private var numberOfCards: UInt = 6
 
-class ViewController: UIViewController{
+class ViewController: UIViewController
+{
 
-    @IBOutlet var kolodaView: KolodaView!
     
+    @IBOutlet var kolodaView: KolodaView!
    
 /* FBSDKLoginButtonDelegate */
     
-    @IBOutlet var TextField: UITextField!
-    @IBOutlet var eventTitle: UILabel!
-    @IBOutlet var eventInfo: UILabel!
+   
+    @IBOutlet var Image: UIView!
+  
     @IBOutlet var Like: UIButton!
-    @IBOutlet var Next: UIButton!
     @IBOutlet var Dislike: UIButton!
-    @IBOutlet weak var Goback: UIButton!
-    var x = -3
-    var go = false
+    @IBOutlet var GO: UIButton!
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        eventTitle.text = "event01"
-        eventInfo.text = "blabalbalbal01"
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
     }
-  
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    func Image(img: AnyObject)
     {
-        if (go == true)
-        {
-            if (x == 0)
-            {
-                
-                eventTitle.text = "event01"
-                eventInfo.text = "blabalbalbal01"
-            }
-            if (x == 1)
-            {
-               
-                eventTitle.text = "event02"
-                eventInfo.text = "blabalbalbal02"
-                
-            }
-            if ( x == 2)
-            {
-                
-                eventTitle.text = "event03"
-                eventInfo.text = "blabalbalbal03"
-            }
-            if (x == 3)
-            {
-                
-                eventTitle.text = "event04"
-                eventInfo.text = "blabalbalbal04"
-                
-            }
-            if (x == 4)
-            {
-                
-                eventTitle.text = "event05"
-                eventInfo.text = "blabalbalbal05"
-                
-            }
-            if (x == 5)
-            {
-                eventTitle.text = "event06"
-                eventInfo.text = "blabalbalbal06"
-                
-            }
-            if (y == 0)
-            {
-                let Dest : Favori = segue.destinationViewController as! Favori
-                Dest.labelText = eventTitle.text!
-
-            }
-            
-        }
-        else
-        {
+        print("test")
+    }
+    
+   /* override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+                //     let Dest : Favori = segue.destinationViewController as! Favori
+              //  Dest.labelText = eventTitle.text!
             print("don't push")
-        }
         
-    }
-    
-    func doSomeTaskForButton()
-    {
+    } */
 
-        
-        if (x == 0)
-        {
-            eventTitle.text = "event01"
-            eventInfo.text = "blabalbalbal01"
-        }
-        if (x == 1)
-        {
-            eventTitle.text = "event02"
-            eventInfo.text = "blabalbalbal02"
-            
-        }
-        if ( x == 2)
-        {
-            eventTitle.text = "event03"
-            eventInfo.text = "blabalbalbal03"
-        }
-        if (x == 3)
-        {
-            eventTitle.text = "event04"
-            eventInfo.text = "blabalbalbal04"
-            
-        }
-        if (x == 4)
-        {
-            eventTitle.text = "event05"
-            eventInfo.text = "blabalbalbal05"
-            
-        }
-        if (x == 5)
-        {
-            x = -1
-            eventTitle.text = "event06"
-            eventInfo.text = "blabalbalbal06"
-            
-        }
-
-    }
-    @IBAction func next_func(sender: AnyObject)
+    @IBAction func Likefunc(sender: AnyObject)
     {
-    }
-
-    @IBAction func like_func(sender: AnyObject)
-    {
-        go = true
         kolodaView?.swipe(SwipeResultDirection.Right)
-        doSomeTaskForButton()
-        y+=1
-        x+=1
-        
-        
     }
-    
-    @IBAction func dislike_func(sender: AnyObject)
+  
+    @IBAction func DislikeFunc(sender: AnyObject)
     {
-    
-        go = false
         kolodaView?.swipe(SwipeResultDirection.Left)
-        doSomeTaskForButton()
-        x+=1
-     
     }
     
-    
-    @IBAction func goback_func(sender: AnyObject)
-    {
-        if (x > 0)
-        {
-        x -= 1
-        } 
-        doSomeTaskForButton()
-        
-        
-    }
     private var dataSource: Array<UIImage> = {
         var array: Array<UIImage> = []
         
@@ -188,7 +70,7 @@ class ViewController: UIViewController{
         return array
     }()
     
-
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -205,9 +87,23 @@ extension ViewController: KolodaViewDelegate {
         let position = kolodaView.currentCardIndex
         kolodaView.insertCardAtIndexRange(position...position, animated: true)
     }
-    
-    func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://yalantis.com/")!)
+    func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt)
+    {
+        
+        //let imageView = Image
+        //let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        //imageView.userInteractionEnabled = true
+        //imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        
+      /*
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let viewName:NSString = "websiteView"
+        let vc = storyboard.instantiateViewControllerWithIdentifier(viewName as String) as! Info_eventViewController
+        self.showViewController(vc, sender: self)
+        print("test")
+       */
     }
 }
 
@@ -225,8 +121,6 @@ extension ViewController: KolodaViewDataSource {
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
-         doSomeTaskForButton()
-          x+=1
         return NSBundle.mainBundle().loadNibNamed("OverlayView",
                                                   owner: self, options: nil)[0] as? OverlayView
     }

@@ -19,5 +19,84 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arroud-me/LoginControleur.swift"
+            timestampString = "484650201.278393"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "LoginControleur"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Arroud-me/LoginControleur.swift"
+            timestampString = "484650590.269636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "LoginControleur"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arroud_me.LoginControleur.loginButton.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FBSDKLoginButton&gt;"
+                  moduleName = "Arroud-me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///nfs/2015/f/fhenri/Desktop/App-os-HEC/Arroud-me/Arroud-me/LoginControleur.swift"
+                  timestampString = "484650596.564727"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arroud_me.LoginControleur.loginButton.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FBSDKLoginButton&gt;"
+                  moduleName = "Arroud-me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///nfs/2015/f/fhenri/Desktop/App-os-HEC/Arroud-me/Arroud-me/LoginControleur.swift"
+                  timestampString = "484650596.564894"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Arroud_me.LoginControleur.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Arroud_me.LoginControleur&gt;"
+                  moduleName = "Arroud-me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///nfs/2015/f/fhenri/Desktop/App-os-HEC/Arroud-me/Arroud-me/LoginControleur.swift"
+                  timestampString = "484650596.56514"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
