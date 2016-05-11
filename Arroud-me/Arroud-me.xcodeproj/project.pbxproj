@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		61E99EDC647479321469BB6E /* Pods_Arroud_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEBEE05CB469C43C3F2F845 /* Pods_Arroud_me.framework */; };
-		7208FB0E1CDCD571003940A9 /* Favori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208FB0D1CDCD571003940A9 /* Favori.swift */; };
 		720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A85DD1CDB6F44000318A9 /* LoginControleur.swift */; };
 		7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722647291CD6597700B86DB8 /* SecondViewController.swift */; };
 		724CD6651CD653D900707362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CD6641CD653D900707362 /* AppDelegate.swift */; };
@@ -22,6 +21,7 @@
 		7268B0B71CDE4691000DDBC0 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268B0B61CDE4691000DDBC0 /* ExampleOverlayView.swift */; };
 		728469EC1CDE3C37006C90A1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728469EB1CDE3C37006C90A1 /* TestViewController.swift */; };
 		72A8B2EB1CE360040015A85F /* Info-eventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8B2EA1CE360040015A85F /* Info-eventViewController.swift */; };
+		72A8B2ED1CE38FDB0015A85F /* FavoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8B2EC1CE38FDB0015A85F /* FavoriViewController.swift */; };
 		72FA8A2D1CDB40F40038BD97 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2A1CDB40F40038BD97 /* FBSDKCoreKit.framework */; };
 		72FA8A2E1CDB40F40038BD97 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2B1CDB40F40038BD97 /* FBSDKLoginKit.framework */; };
 		72FA8A2F1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FA8A2C1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework */; };
@@ -47,7 +47,6 @@
 /* Begin PBXFileReference section */
 		1EEBEE05CB469C43C3F2F845 /* Pods_Arroud_me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arroud_me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C2A9B36A43F19585D600CD /* Pods-Arroud-me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arroud-me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Arroud-me/Pods-Arroud-me.debug.xcconfig"; sourceTree = "<group>"; };
-		7208FB0D1CDCD571003940A9 /* Favori.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favori.swift; sourceTree = "<group>"; };
 		720A85DD1CDB6F44000318A9 /* LoginControleur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControleur.swift; sourceTree = "<group>"; };
 		722647291CD6597700B86DB8 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		724CD6611CD653D900707362 /* Arroud-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arroud-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +66,7 @@
 		7268B0B61CDE4691000DDBC0 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
 		728469EB1CDE3C37006C90A1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		72A8B2EA1CE360040015A85F /* Info-eventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Info-eventViewController.swift"; sourceTree = "<group>"; };
+		72A8B2EC1CE38FDB0015A85F /* FavoriViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriViewController.swift; sourceTree = "<group>"; };
 		72FA8A2A1CDB40F40038BD97 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		72FA8A2B1CDB40F40038BD97 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		72FA8A2C1CDB40F40038BD97 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
@@ -146,11 +146,11 @@
 				724CD6681CD653D900707362 /* Main.storyboard */,
 				72A8B2EA1CE360040015A85F /* Info-eventViewController.swift */,
 				7268B0B41CDE4642000DDBC0 /* OverlayView.xib */,
-				7208FB0D1CDCD571003940A9 /* Favori.swift */,
 				724CD66B1CD653D900707362 /* Assets.xcassets */,
 				724CD66D1CD653D900707362 /* LaunchScreen.storyboard */,
 				724CD6701CD653D900707362 /* Info.plist */,
 				728469EB1CDE3C37006C90A1 /* TestViewController.swift */,
+				72A8B2EC1CE38FDB0015A85F /* FavoriViewController.swift */,
 			);
 			path = "Arroud-me";
 			sourceTree = "<group>";
@@ -367,8 +367,8 @@
 			files = (
 				7226472A1CD6597700B86DB8 /* SecondViewController.swift in Sources */,
 				7268B0B71CDE4691000DDBC0 /* ExampleOverlayView.swift in Sources */,
-				7208FB0E1CDCD571003940A9 /* Favori.swift in Sources */,
 				72A8B2EB1CE360040015A85F /* Info-eventViewController.swift in Sources */,
+				72A8B2ED1CE38FDB0015A85F /* FavoriViewController.swift in Sources */,
 				728469EC1CDE3C37006C90A1 /* TestViewController.swift in Sources */,
 				724CD6671CD653D900707362 /* ViewController.swift in Sources */,
 				720A85DE1CDB6F44000318A9 /* LoginControleur.swift in Sources */,

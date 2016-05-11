@@ -52,6 +52,12 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
         self.My_map.setRegion(currentRegion, animated: true)
     }
 
+    func test(pinNumber : Int)
+    {
+
+        
+    }
+    
     /*
     // MARK: - Navigation
 

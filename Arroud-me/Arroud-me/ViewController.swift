@@ -90,6 +90,7 @@ extension ViewController: KolodaViewDelegate {
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt)
     {
         
+        
         //let imageView = Image
         //let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
         //imageView.userInteractionEnabled = true
