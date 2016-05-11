@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fpv-SE-hIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="-310"/>
+            <point key="canvasLocation" x="28" y="-394"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="heb-YW-noI">
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGZ-cN-nsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="1146"/>
+            <point key="canvasLocation" x="-127" y="654"/>
         </scene>
         <!--Favori View Controller-->
         <scene sceneID="sUA-k9-NZC">
@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APT-bK-wDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="157"/>
+            <point key="canvasLocation" x="899" y="17"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="WUk-1K-DQZ">
@@ -354,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjw-x9-joL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1234" y="92"/>
+            <point key="canvasLocation" x="-1314" y="592"/>
         </scene>
     </scenes>
     <resources>
@@ -368,6 +368,6 @@
         <image name="like" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="791-1P-Vry"/>
+        <segue reference="Yuc-G1-Gir"/>
     </inferredMetricsTieBreakers>
 </document>
