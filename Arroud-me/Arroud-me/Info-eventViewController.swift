@@ -12,8 +12,6 @@ import MapKit
 class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 {
     @IBOutlet var My_map: MKMapView!
-
-    @IBOutlet var Geoloc: UIButton!
     
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
@@ -26,20 +24,8 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
         My_map.mapType = MKMapType.Hybrid
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-       
-        // Do any additional setup after loading the view.
-    }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func Geoloc_func(sender: AnyObject)
-    {
-      //  var userLocation = MKUserLocation()
+        
+        
         let latDelta = 0.01
         let longDelta = 0.01
         let currentLatitude = 48.7578905
@@ -50,6 +36,17 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
         let currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(currentLatitude, currentLongitude)
         let currentRegion: MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, currentLocationSpan)
         self.My_map.setRegion(currentRegion, animated: true)
+        
+        
+        locationManager.requestAlwaysAuthorization()
+       
+        // Do any additional setup after loading the view.
+    }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     func test(pinNumber : Int)

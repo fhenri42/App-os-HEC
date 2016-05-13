@@ -1,12 +1,15 @@
 PODS:
+  - DualSlideMenu (1.7.1)
   - Koloda (3.1.1):
     - pop (~> 1.0)
   - pop (1.0.9)
 
 DEPENDENCIES:
+  - DualSlideMenu
   - Koloda
 
 SPEC CHECKSUMS:
+  DualSlideMenu: c81d55c3b61c0053abdaadf000a7b32d7956245e
   Koloda: 782e61549cafec9fd69fc70c4a8b54bce997894d
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 

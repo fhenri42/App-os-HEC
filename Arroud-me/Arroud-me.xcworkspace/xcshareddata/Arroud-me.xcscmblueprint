@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7DE31C8335D32F89C186FFC557C62BB147FB13F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9DEFE01F77AF3A8D3781C8A999F567FC42E98AD8" : 0,
+    "7DE31C8335D32F89C186FFC557C62BB147FB13F9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1671449B-09C3-4EFE-973D-D17137646F6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9DEFE01F77AF3A8D3781C8A999F567FC42E98AD8" : "..\/DualSlideMenu",
+    "7DE31C8335D32F89C186FFC557C62BB147FB13F9" : "App-os-HEC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Arroud-me",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Arroud-me\/Arroud-me.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fhenri42\/App-os-HEC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7DE31C8335D32F89C186FFC557C62BB147FB13F9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vinnyoodles\/DualSlideMenu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9DEFE01F77AF3A8D3781C8A999F567FC42E98AD8"
+    }
+  ]
+}

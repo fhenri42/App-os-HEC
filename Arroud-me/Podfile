@@ -7,6 +7,7 @@ xcodeproj 'Arroud-me.xcodeproj'
 
 target 'Arroud-me' do
 	pod 'Koloda'
+	pod 'DualSlideMenu'
 end
 
 target 'Arroud-meTests' do

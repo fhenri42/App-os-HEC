@@ -18,19 +18,36 @@ class ViewController: UIViewController
 {
 
     
+ 
+//    @IBOutlet var Open: UIBarButtonItem!
+
     @IBOutlet var kolodaView: KolodaView!
-   
 /* FBSDKLoginButtonDelegate */
     
-   
-    @IBOutlet var Image: UIView!
-  
+    
+    
+    
+    
+    @IBOutlet var Open: UIBarButtonItem!
+    @IBOutlet var Favoris: UIButton!
     @IBOutlet var Like: UIButton!
     @IBOutlet var Dislike: UIButton!
-    @IBOutlet var GO: UIButton!
+    @IBOutlet var Go: UIButton!
+    
+    
+    
+    
+    
+    
+    
+   
+   // @IBOutlet var Image: UIView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        Open.target = self.revealViewController()
+        Open.action = Selector("revealToggle:")
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -48,16 +65,18 @@ class ViewController: UIViewController
             print("don't push")
         
     } */
-
+    
     @IBAction func Likefunc(sender: AnyObject)
     {
-        kolodaView?.swipe(SwipeResultDirection.Right)
+            kolodaView?.swipe(SwipeResultDirection.Right)
     }
-  
+
+   
     @IBAction func DislikeFunc(sender: AnyObject)
     {
         kolodaView?.swipe(SwipeResultDirection.Left)
     }
+  
     
     private var dataSource: Array<UIImage> = {
         var array: Array<UIImage> = []
@@ -69,9 +88,6 @@ class ViewController: UIViewController
         
         return array
     }()
-    
- 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

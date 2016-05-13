@@ -9,9 +9,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
-    
-
     
     var labelText = String ()
     

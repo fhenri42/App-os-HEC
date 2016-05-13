@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Arroud-me/DualSlideMenu.framework"
   install_framework "Pods-Arroud-me/Koloda.framework"
   install_framework "Pods-Arroud-me/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Arroud-me/DualSlideMenu.framework"
   install_framework "Pods-Arroud-me/Koloda.framework"
   install_framework "Pods-Arroud-me/pop.framework"
 fi

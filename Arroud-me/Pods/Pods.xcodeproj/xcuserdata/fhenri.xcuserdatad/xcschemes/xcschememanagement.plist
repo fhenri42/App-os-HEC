@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DualSlideMenu-DualSlideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DualSlideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Koloda.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C45290004E0078130C91A71711094467</key>
+		<key>3CD051F30FC64AA061484269D84720EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF9948F85DC6EC7CC7C683ED7215F7C4</key>
+		<key>8364974FB0BFFC16DBA404533C5673E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5BBFDF6301622A84C32F03A4ABD0890</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C45290004E0078130C91A71711094467</key>
 		<dict>
 			<key>primary</key>
 			<true/>

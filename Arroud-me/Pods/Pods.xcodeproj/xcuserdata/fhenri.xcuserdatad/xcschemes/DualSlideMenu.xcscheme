@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ED76139E4A6511EF9E86B646'
-               BlueprintName = 'pop'
+               BlueprintIdentifier = '9AF03287DCB9878C12CF35FA'
+               BlueprintName = 'DualSlideMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'pop.framework'>
+               BuildableName = 'DualSlideMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
