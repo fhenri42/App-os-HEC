@@ -12,7 +12,11 @@ import FBSDKLoginKit
 import Koloda
 
 var y = 0
+
 private var numberOfCards: UInt = 6
+
+var logoImages: [UIImage] = []
+
 
 class ViewController: UIViewController
 {
@@ -24,7 +28,7 @@ class ViewController: UIViewController
     @IBOutlet var kolodaView: KolodaView!
 /* FBSDKLoginButtonDelegate */
     
-    
+   
     
     
     
@@ -36,7 +40,7 @@ class ViewController: UIViewController
     
     @IBOutlet weak var test: UINavigationItem!
     
-    
+    var idx : Int = 0
     
     
     
@@ -46,6 +50,13 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        logoImages.append(UIImage(named: "Artsy Hour")!)
+        logoImages.append(UIImage(named: "Du dimanche")!)
+        logoImages.append(UIImage(named: "Burger")!)
+        logoImages.append(UIImage(named: "Nuit debout")!)
+        logoImages.append(UIImage(named: "Disco slade")!)
+        logoImages.append(UIImage(named: "Nova")!)
+        logoImages.append(UIImage(named: "Paris festival")!)
         
         
         Open.target = self.revealViewController()
@@ -54,7 +65,7 @@ class ViewController: UIViewController
         kolodaView.dataSource = self
         kolodaView.delegate = self
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-    }
+        }
     func Image(img: AnyObject)
     {
         print("test")
@@ -70,7 +81,7 @@ class ViewController: UIViewController
     
     @IBAction func Likefunc(sender: AnyObject)
     {
-            kolodaView?.swipe(SwipeResultDirection.Right)
+        kolodaView?.swipe(SwipeResultDirection.Right)
     }
 
    
@@ -79,6 +90,26 @@ class ViewController: UIViewController
         kolodaView?.swipe(SwipeResultDirection.Left)
     }
   
+    @IBAction func Go_func(sender: AnyObject)
+    {
+        performSegueWithIdentifier("Henri", sender: self.idx)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showInfoSegue" {
+            if let tvc = segue.destinationViewController as? TestViewController {
+                tvc.new = logoImages[sender as! Int]
+            }
+            if segue.identifier == "Henri"{
+                if let tvc = segue.destinationViewController as? Info_eventViewController {
+                    tvc.new = logoImages[sender as! Int]
+                }
+            }
+            
+  
+        }
+    }
     
     private var dataSource: Array<UIImage> = {
         var array: Array<UIImage> = []
@@ -87,7 +118,6 @@ class ViewController: UIViewController
             array.append(UIImage(named: "Card_like_\(index + 1)")!)
 
         }
-        
         return array
     }()
     override func didReceiveMemoryWarning() {
@@ -100,29 +130,13 @@ class ViewController: UIViewController
 extension ViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
-        
         dataSource.insert(UIImage(named: "Card_like_1")!, atIndex: kolodaView.currentCardIndex - 1)
         let position = kolodaView.currentCardIndex
         kolodaView.insertCardAtIndexRange(position...position, animated: true)
     }
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt)
     {
-        
-        
-        //let imageView = Image
-        //let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
-        //imageView.userInteractionEnabled = true
-        //imageView.addGestureRecognizer(tapGestureRecognizer)
-        
-        
-      /*
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let viewName:NSString = "websiteView"
-        let vc = storyboard.instantiateViewControllerWithIdentifier(viewName as String) as! Info_eventViewController
-        self.showViewController(vc, sender: self)
-        print("test")
-       */
+        performSegueWithIdentifier("showInfoSegue", sender: index)
     }
 }
 
@@ -130,12 +144,13 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
     
     func kolodaNumberOfCards(koloda:KolodaView) -> UInt {
-
+    
         return UInt(dataSource.count)
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-      
+        self.idx = Int(index)
+        print(self.idx)
         return UIImageView(image: dataSource[Int(index)])
     }
     

@@ -12,10 +12,12 @@ import MapKit
 class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 {
     @IBOutlet var My_map: MKMapView!
+    var new : UIImage?
     
+    @IBOutlet weak var My_image: UIButton!
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
-        
+    
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         super.viewDidLoad()
@@ -24,7 +26,8 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
         My_map.mapType = MKMapType.Hybrid
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
+        //let new = logoImages[y]
+        My_image.setImage(new, forState: UIControlState.Normal)
         
         let latDelta = 0.01
         let longDelta = 0.01

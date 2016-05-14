@@ -18,17 +18,14 @@ class ExampleOverlayView: OverlayView {
         
         var imageView = UIImageView(frame: self.bounds)
         self.addSubview(imageView)
-        
         return imageView
         }()
 
     override var overlayState: SwipeResultDirection? {
         didSet {
             switch overlayState {
-            case .Left? :
-                overlayImageView.image = UIImage(named: overlayLeftImageName)
-            case .Right? :
-                overlayImageView.image = UIImage(named: overlayRightImageName)
+            case .Left? : overlayImageView.image = UIImage(named: overlayLeftImageName)
+            case .Right? : overlayImageView.image = UIImage(named: overlayRightImageName)
             default:
                 overlayImageView.image = nil
             }

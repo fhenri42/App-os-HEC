@@ -103,16 +103,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-pj-8hS">
                                 <rect key="frame" x="20" y="265" width="560" height="156"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxU-eb-obW">
-                                <rect key="frame" x="86" y="66" width="429" height="161"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="429" id="Cv7-09-zpC"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Artsy Hour"/>
-                                <connections>
-                                    <segue destination="9Vw-EW-QhR" kind="modal" id="mIR-5A-2s6"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rja-le-MDn">
                                 <rect key="frame" x="20" y="422" width="560" height="178"/>
                                 <subviews>
@@ -241,6 +231,13 @@
                                     <segue destination="C5A-a7-IRp" kind="modal" id="LBS-Sd-z5t"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-Pq-ea5">
+                                <rect key="frame" x="44" y="58" width="533" height="162"/>
+                                <state key="normal" backgroundImage="Du dimanche"/>
+                                <connections>
+                                    <segue destination="9Vw-EW-QhR" kind="show" id="8jO-Tm-dIT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ4-ek-92O">
                                 <rect key="frame" x="20" y="23" width="37" height="17"/>
                                 <constraints>
@@ -248,15 +245,11 @@
                                     <constraint firstAttribute="width" constant="37" id="w2N-BN-qBk"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="arraow"/>
-                                <connections>
-                                    <segue destination="FOP-I0-Vpx" kind="modal" id="ipa-fZ-RHL"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mvC-pj-8hS" firstAttribute="leading" secondItem="HMG-Mw-NIa" secondAttribute="leading" constant="20" id="1AC-7h-Ylb"/>
-                            <constraint firstItem="bxU-eb-obW" firstAttribute="centerX" secondItem="WTb-25-Vql" secondAttribute="centerX" id="7ev-KF-CC4"/>
                             <constraint firstItem="CQ4-ek-92O" firstAttribute="top" secondItem="odS-jO-nrW" secondAttribute="bottom" constant="3" id="8Ma-Dz-120"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" id="AJ6-64-ZmS"/>
                             <constraint firstItem="CGn-ch-VXH" firstAttribute="trailing" secondItem="WTb-25-Vql" secondAttribute="trailing" constant="64" id="BVz-lt-4MA"/>
@@ -264,26 +257,29 @@
                             <constraint firstItem="WTb-25-Vql" firstAttribute="top" secondItem="HMG-Mw-NIa" secondAttribute="top" constant="13" id="JYV-22-7mK"/>
                             <constraint firstItem="dZ1-Ct-jHb" firstAttribute="top" secondItem="CQ4-ek-92O" secondAttribute="top" constant="-10" id="MxC-JW-WOt"/>
                             <constraint firstItem="zcf-J9-Y3t" firstAttribute="top" secondItem="mvC-pj-8hS" secondAttribute="bottom" constant="179" id="NIn-Ve-1wl"/>
-                            <constraint firstItem="bxU-eb-obW" firstAttribute="top" secondItem="WTb-25-Vql" secondAttribute="bottom" constant="18" id="QQg-3y-Euw"/>
-                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="bxU-eb-obW" secondAttribute="bottom" constant="8" id="bnu-Pc-dk4"/>
+                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="4Xp-Pq-ea5" secondAttribute="bottom" constant="15" id="Uf8-5T-vp3"/>
+                            <constraint firstItem="4Xp-Pq-ea5" firstAttribute="leading" secondItem="HMG-Mw-NIa" secondAttribute="leadingMargin" constant="24" id="bjo-lt-0O6"/>
                             <constraint firstItem="mvC-pj-8hS" firstAttribute="top" secondItem="CGn-ch-VXH" secondAttribute="bottom" constant="2" id="g2J-pK-Up2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dZ1-Ct-jHb" secondAttribute="trailing" constant="3" id="gEC-WZ-wf4"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="trailing" secondItem="mvC-pj-8hS" secondAttribute="trailing" id="k5o-gB-IhP"/>
                             <constraint firstItem="WTb-25-Vql" firstAttribute="centerX" secondItem="HMG-Mw-NIa" secondAttribute="centerX" id="kUB-qE-Ufu"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="top" secondItem="mvC-pj-8hS" secondAttribute="bottom" constant="1" id="l6K-NE-eCt"/>
                             <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="HMG-Mw-NIa" secondAttribute="top" constant="235" id="lTx-Cg-SEQ"/>
+                            <constraint firstItem="4Xp-Pq-ea5" firstAttribute="top" secondItem="WTb-25-Vql" secondAttribute="bottom" constant="10" id="m0k-UP-6xy"/>
                             <constraint firstItem="CQ4-ek-92O" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" id="qRM-k3-y9q"/>
                             <constraint firstItem="mvC-pj-8hS" firstAttribute="centerX" secondItem="WTb-25-Vql" secondAttribute="centerX" id="wB0-t2-wme"/>
+                            <constraint firstItem="4Xp-Pq-ea5" firstAttribute="centerX" secondItem="WTb-25-Vql" secondAttribute="centerX" constant="10" id="xk2-10-UrP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fSU-v3-jxL"/>
                     <connections>
+                        <outlet property="My_image" destination="4Xp-Pq-ea5" id="yuO-Qc-zpJ"/>
                         <outlet property="My_map" destination="mvC-pj-8hS" id="QCX-c4-zTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fpv-SE-hIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2429" y="-554"/>
+            <point key="canvasLocation" x="-1924" y="-587"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="kk2-LZ-lB0">
@@ -307,14 +303,11 @@
                                     <segue destination="FOP-I0-Vpx" kind="modal" id="qjZ-jL-WqC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Du dimanche" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-ZF-ajf">
-                                <rect key="frame" x="20" y="88" width="560" height="196"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bOw-1N-zmA">
-                                <rect key="frame" x="20" y="292" width="560" height="198"/>
+                                <rect key="frame" x="20" y="261" width="560" height="229"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="Sbr-a0-AWG"/>
+                                    <constraint firstAttribute="height" constant="229" id="Sbr-a0-AWG"/>
                                 </constraints>
                                 <mutableString key="text">BROC’DEJ DU DIMANCHE
 
@@ -360,36 +353,46 @@ Venez nombreux!</mutableString>
                                 </constraints>
                                 <state key="normal" backgroundImage="Logo-go"/>
                                 <connections>
-                                    <segue destination="gHG-Do-rqs" kind="modal" id="hrm-Dh-48M"/>
+                                    <segue destination="gHG-Do-rqs" kind="show" id="rtS-9Y-WK8"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-YW-ToE">
+                                <rect key="frame" x="41" y="88" width="519" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="gbC-80-UvY"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Du dimanche"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JvQ-ig-0S6" firstAttribute="leading" secondItem="5ii-hN-548" secondAttribute="leadingMargin" id="3Hw-ea-ueb"/>
+                            <constraint firstItem="bhn-YW-ToE" firstAttribute="centerX" secondItem="bf7-ug-egg" secondAttribute="centerX" id="4p6-qC-K40"/>
                             <constraint firstItem="bf7-ug-egg" firstAttribute="top" secondItem="Eqw-Kg-VMw" secondAttribute="top" constant="8" id="9Ok-yt-InR"/>
                             <constraint firstItem="JvQ-ig-0S6" firstAttribute="centerY" secondItem="Eqw-Kg-VMw" secondAttribute="centerY" constant="-3.5" id="ALj-bV-Zq9"/>
-                            <constraint firstItem="bf7-ug-egg" firstAttribute="centerX" secondItem="xPY-ZF-ajf" secondAttribute="centerX" id="Bjf-is-fzT"/>
-                            <constraint firstItem="xPY-ZF-ajf" firstAttribute="top" secondItem="bf7-ug-egg" secondAttribute="bottom" constant="25" id="Gj2-Zg-x8b"/>
+                            <constraint firstItem="bhn-YW-ToE" firstAttribute="leading" secondItem="5ii-hN-548" secondAttribute="leadingMargin" constant="21" id="Fpr-DT-Ag3"/>
+                            <constraint firstItem="bOw-1N-zmA" firstAttribute="leading" secondItem="JvQ-ig-0S6" secondAttribute="leading" id="G5j-cl-pQi"/>
                             <constraint firstItem="Q9Z-an-dI9" firstAttribute="centerX" secondItem="5ii-hN-548" secondAttribute="centerX" id="Mfs-S0-WWw"/>
                             <constraint firstItem="Tui-ra-VwH" firstAttribute="top" secondItem="Q9Z-an-dI9" secondAttribute="bottom" constant="8" symbolic="YES" id="P2o-bF-uW2"/>
                             <constraint firstItem="JvQ-ig-0S6" firstAttribute="top" secondItem="1Tw-rU-Oco" secondAttribute="bottom" id="UkO-8k-0KM"/>
                             <constraint firstItem="Q9Z-an-dI9" firstAttribute="centerX" secondItem="bOw-1N-zmA" secondAttribute="centerX" id="ZpR-Bs-xg0"/>
-                            <constraint firstItem="xPY-ZF-ajf" firstAttribute="trailing" secondItem="Eqw-Kg-VMw" secondAttribute="trailing" id="fDN-5z-RQV"/>
+                            <constraint firstItem="bhn-YW-ToE" firstAttribute="top" secondItem="bf7-ug-egg" secondAttribute="bottom" constant="25" id="aeg-TV-ZkV"/>
+                            <constraint firstItem="bOw-1N-zmA" firstAttribute="top" secondItem="bhn-YW-ToE" secondAttribute="bottom" constant="17" id="chy-AT-TZ1"/>
+                            <constraint firstItem="bhn-YW-ToE" firstAttribute="centerX" secondItem="bOw-1N-zmA" secondAttribute="centerX" id="g0h-jd-uUy"/>
                             <constraint firstItem="Eqw-Kg-VMw" firstAttribute="trailing" secondItem="5ii-hN-548" secondAttribute="trailingMargin" id="iMW-4t-pFv"/>
-                            <constraint firstItem="bOw-1N-zmA" firstAttribute="leading" secondItem="xPY-ZF-ajf" secondAttribute="leading" id="kvy-pO-Rio"/>
-                            <constraint firstItem="bOw-1N-zmA" firstAttribute="trailing" secondItem="xPY-ZF-ajf" secondAttribute="trailing" id="o9z-4a-g3F"/>
                             <constraint firstItem="Q9Z-an-dI9" firstAttribute="top" secondItem="bOw-1N-zmA" secondAttribute="bottom" constant="23" id="omm-iq-m5P"/>
                             <constraint firstItem="JvQ-ig-0S6" firstAttribute="top" secondItem="Eqw-Kg-VMw" secondAttribute="top" id="pIe-AB-sNK"/>
-                            <constraint firstItem="bOw-1N-zmA" firstAttribute="top" secondItem="xPY-ZF-ajf" secondAttribute="bottom" constant="8" symbolic="YES" id="sVZ-68-3fc"/>
-                            <constraint firstItem="Tui-ra-VwH" firstAttribute="top" secondItem="xPY-ZF-ajf" secondAttribute="bottom" constant="316" id="uxz-QI-MFL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gru-KZ-c5T"/>
+                    <connections>
+                        <outlet property="My_image" destination="bhn-YW-ToE" id="6WT-sZ-TFP"/>
+                        <outlet property="My_text" destination="bOw-1N-zmA" id="3Fg-JH-pYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeV-Ol-YYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2444" y="308"/>
+            <point key="canvasLocation" x="-1129" y="-448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WAG-9Y-F0z">
@@ -422,6 +425,7 @@ Venez nombreux!</mutableString>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-sW-13W" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="0.0" y="160" width="600" height="280"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-oR-Upa">
                                 <rect key="frame" x="259" y="503" width="82" height="77"/>
@@ -430,7 +434,7 @@ Venez nombreux!</mutableString>
                                 </constraints>
                                 <state key="normal" backgroundImage="Logo-go"/>
                                 <connections>
-                                    <segue destination="gHG-Do-rqs" kind="modal" id="PUl-Mb-mqp"/>
+                                    <action selector="Go_func:" destination="ATD-CH-kwo" eventType="touchUpInside" id="Ex9-Ye-ZGh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="12v-h1-oCn">
@@ -503,6 +507,8 @@ Venez nombreux!</mutableString>
                         <outlet property="Open" destination="1Wc-sb-K3K" id="7jc-Cu-Sy9"/>
                         <outlet property="kolodaView" destination="n2N-sW-13W" id="eD2-Vg-w7i"/>
                         <outlet property="test" destination="2H4-wO-vyf" id="g8W-0O-zBB"/>
+                        <segue destination="9Vw-EW-QhR" kind="show" identifier="showInfoSegue" id="E2j-Xa-Ecs"/>
+                        <segue destination="gHG-Do-rqs" kind="show" identifier="Henri" id="hCf-kM-N5o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReT-HJ-NVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -560,11 +566,12 @@ Venez nombreux!</mutableString>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APT-bK-wDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1049" y="-390"/>
+            <point key="canvasLocation" x="-393" y="-748"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ff2-N5-ktT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roW-T4-y5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="C5A-a7-IRp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IGK-s0-XBl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -574,9 +581,8 @@ Venez nombreux!</mutableString>
                         <segue destination="b6K-j6-n75" kind="relationship" relationship="rootViewController" id="ujh-9J-enq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="roW-T4-y5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-930" y="-1525"/>
+            <point key="canvasLocation" x="-460" y="-1501"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ypC-qD-FUP">
@@ -612,6 +618,13 @@ Venez nombreux!</mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5ul-c0-oDx">
+                                <rect key="frame" x="180" y="43" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="43S-g5-Ype"/>
+                                    <constraint firstAttribute="width" constant="240" id="dEi-3W-EMH"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXo-R1-HhI" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="277" y="312" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -622,36 +635,21 @@ Venez nombreux!</mutableString>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0by-6z-n0n">
-                                <rect key="frame" x="238" y="370" width="125" height="125"/>
-                                <state key="normal" backgroundImage="Logo-go"/>
-                                <connections>
-                                    <segue destination="FOP-I0-Vpx" kind="modal" id="0as-OH-0KM"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5ul-c0-oDx">
-                                <rect key="frame" x="180" y="43" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="43S-g5-Ype"/>
-                                    <constraint firstAttribute="width" constant="240" id="dEi-3W-EMH"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LBG-j9-V7d" firstAttribute="top" secondItem="l9j-qc-IQs" secondAttribute="bottom" constant="34" id="1Hh-jL-OpZ"/>
                             <constraint firstItem="5ul-c0-oDx" firstAttribute="top" secondItem="wwa-RL-GT3" secondAttribute="bottom" constant="23" id="K6H-Sy-ewX"/>
-                            <constraint firstItem="0by-6z-n0n" firstAttribute="top" secondItem="HXo-R1-HhI" secondAttribute="bottom" constant="28" id="LvD-i3-LHU"/>
                             <constraint firstItem="HXo-R1-HhI" firstAttribute="centerX" secondItem="Oxw-1O-bOp" secondAttribute="centerX" id="Ru0-MX-awy"/>
                             <constraint firstItem="HXo-R1-HhI" firstAttribute="centerX" secondItem="l9j-qc-IQs" secondAttribute="centerX" id="So6-7d-eDr"/>
                             <constraint firstItem="HXo-R1-HhI" firstAttribute="centerX" secondItem="5ul-c0-oDx" secondAttribute="centerX" id="Yxv-q1-oK2"/>
                             <constraint firstAttribute="bottom" secondItem="HXo-R1-HhI" secondAttribute="bottom" constant="258" id="cQ8-Os-mlV"/>
-                            <constraint firstItem="0by-6z-n0n" firstAttribute="centerX" secondItem="HXo-R1-HhI" secondAttribute="centerX" id="d2i-Lm-81F"/>
                             <constraint firstItem="l9j-qc-IQs" firstAttribute="centerX" secondItem="5ul-c0-oDx" secondAttribute="centerX" id="oIT-Qz-a6w"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="HXo-R1-HhI" id="TH4-LV-09j"/>
+                        <segue destination="FOP-I0-Vpx" kind="presentation" identifier="loggedInSegue" id="Hdx-a5-du3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjw-x9-joL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -660,7 +658,6 @@ Venez nombreux!</mutableString>
         </scene>
     </scenes>
     <resources>
-        <image name="Artsy Hour" width="1024" height="682"/>
         <image name="Du dimanche" width="320" height="213"/>
         <image name="Go-favo" width="83" height="83"/>
         <image name="Logo-go" width="125" height="125"/>
@@ -677,8 +674,9 @@ Venez nombreux!</mutableString>
         <image name="tete7" width="66" height="66"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hrm-Dh-48M"/>
-        <segue reference="ipa-fZ-RHL"/>
+        <segue reference="8jO-Tm-dIT"/>
+        <segue reference="hCf-kM-N5o"/>
+        <segue reference="qjZ-jL-WqC"/>
         <segue reference="LBS-Sd-z5t"/>
     </inferredMetricsTieBreakers>
 </document>
