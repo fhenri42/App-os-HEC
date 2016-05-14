@@ -47,7 +47,7 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
         Open.target = self.revealViewController()
-        Open.action = Selector("revealToggle:")
+        Open.action = #selector(SWRevealViewController.revealToggle(_:))
         
         kolodaView.dataSource = self
         kolodaView.delegate = self

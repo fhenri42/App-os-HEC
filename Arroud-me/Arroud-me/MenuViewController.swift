@@ -14,7 +14,9 @@ import FBSDKLoginKit
 class MenuViewController: UIViewController {
 
 
-
+    //@IBOutlet var loginButton: FBSDKLoginButton!
+  
+    @IBOutlet var logout: FBSDKLoginButton!
     @IBOutlet var lblName: UILabel!
     @IBOutlet var ivUserProfileImage: UIImageView!
     @IBOutlet var Open: UIBarButtonItem!
