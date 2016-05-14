@@ -17,7 +17,7 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
     override func viewDidLoad() {
         
         
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         super.viewDidLoad()
         My_map.delegate = self
         My_map.showsUserLocation = true

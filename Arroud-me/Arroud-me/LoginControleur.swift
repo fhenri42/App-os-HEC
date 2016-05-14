@@ -29,6 +29,7 @@ class LoginControleur: UIViewController, FBSDKLoginButtonDelegate
         loginButton.readPermissions = ["email"]
         self.view.addSubview(loginButton)
         loginButton.delegate = self
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
     }
   
     override func viewDidAppear(animated: Bool)

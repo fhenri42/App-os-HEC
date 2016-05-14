@@ -34,6 +34,7 @@ class ViewController: UIViewController
     @IBOutlet var Dislike: UIButton!
     @IBOutlet var Go: UIButton!
     
+    @IBOutlet weak var test: UINavigationItem!
     
     
     
@@ -46,9 +47,10 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
+        
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         kolodaView.dataSource = self
         kolodaView.delegate = self
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal

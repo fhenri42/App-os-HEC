@@ -15,6 +15,7 @@ class TestViewController: UIViewController {
     override func viewDidLoad()
     {
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
