@@ -13,11 +13,17 @@ class TestViewController: UIViewController {
    var new : UIImage?
     
     
+    @IBOutlet var test: UINavigationItem!
     @IBOutlet weak var My_image: UIButton!
     @IBOutlet weak var My_text: UITextView!
     
     override func viewDidLoad()
     {
+        let imageView = UIImageView(frame: CGRect(x: 0, y:0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        let logo = UIImage(named: "background")
+        imageView.image = logo
+        self.test.titleView = imageView
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         

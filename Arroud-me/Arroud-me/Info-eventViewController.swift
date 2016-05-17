@@ -25,12 +25,19 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
     @IBOutlet var My_map: MKMapView!
     @IBOutlet weak var My_seg: UISegmentedControl!
     @IBOutlet weak var My_image: UIButton!
+    
+    @IBOutlet var test: UINavigationItem!
 
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
     
         w = 5
-        
+        self.My_seg.layer.cornerRadius = 5
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        imageView.contentMode = .ScaleAspectFit
+        let logo = UIImage(named: "background")
+        imageView.image = logo
+        self.test.titleView = imageView
        
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
