@@ -40,7 +40,7 @@ class FavoriViewController: UIViewController,UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         //self.tableView!. = 0;
-        self.delegateInfo?.test(indexPath.row)
+   //     self.delegateInfo?.test(indexPath.row)
        // self.tableView!.selectedIndex = 0
        print("You selected cell #\(indexPath.row)!")
    }

@@ -49,6 +49,7 @@ class ViewController: UIViewController
    // @IBOutlet var Image: UIView!
     override func viewDidLoad()
     {
+        y = 0
         super.viewDidLoad()
         logoImages.append(UIImage(named: "Artsy Hour")!)
         logoImages.append(UIImage(named: "Du dimanche")!)
@@ -81,12 +82,14 @@ class ViewController: UIViewController
     
     @IBAction func Likefunc(sender: AnyObject)
     {
+        y += 1
         kolodaView?.swipe(SwipeResultDirection.Right)
     }
 
    
     @IBAction func DislikeFunc(sender: AnyObject)
     {
+        y += 1
         kolodaView?.swipe(SwipeResultDirection.Left)
     }
   
@@ -99,15 +102,9 @@ class ViewController: UIViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showInfoSegue" {
             if let tvc = segue.destinationViewController as? TestViewController {
+                w = 0
                 tvc.new = logoImages[sender as! Int]
             }
-            if segue.identifier == "Henri"{
-                if let tvc = segue.destinationViewController as? Info_eventViewController {
-                    tvc.new = logoImages[sender as! Int]
-                }
-            }
-            
-  
         }
     }
     
@@ -136,6 +133,7 @@ extension ViewController: KolodaViewDelegate {
     }
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt)
     {
+        y = Int(index)
         performSegueWithIdentifier("showInfoSegue", sender: index)
     }
 }

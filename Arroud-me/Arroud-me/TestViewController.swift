@@ -10,19 +10,21 @@ import UIKit
 
 class TestViewController: UIViewController {
 
-    var new : UIImage?
+   var new : UIImage?
     
     
     @IBOutlet weak var My_image: UIButton!
     @IBOutlet weak var My_text: UITextView!
-    @IBOutlet var PrototypeCell: UIView!
     
     override func viewDidLoad()
     {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Back")!)
         
-//        let new = logoImages[y]
+    if ( w != 0 )
+        {
+            new = logoImages[y]
+        }
         My_image.setImage(new, forState: UIControlState.Normal)
         super.viewDidLoad()
    
@@ -52,21 +54,11 @@ class TestViewController: UIViewController {
             My_text.text = "nova mix club\n 75011 paris\n13 mai 20h\nAddicts du Vendredi en musique, camarades de danses excités, habitués des ondes de Radio Nova : le Nova [Mix] Club est de retour ce vendredi 13 mai au BADABOUM avec un line up qui, plutôt que d’apporter le malheur comme le voudraient les superstitions pessimistes, apportera au contraire un max de bonheur, via l’alliance de la funk, de la techno, de la house, et de la grosse chaleur qui risque de régner dans le coin.\n            - Warm Up By Nova Team – Tout et n’importe quoi mais en bien\n- LORD FUNK - Funk anoblie\n- Local DJ - Mix du coin\n - Madben - Techno Eden\n - Traumer - House transversale\n CONCRÈTEMENT\n      Ouverture des portes à 20h00, et direct sur Radio Nova de 21h00 à Minuit.            \nEntrée gratuite sur invitation uniquement valable avant 22h00 http:www.novaplanet.com/events/novamixclub\n            LE BADABOUM\n            Polymorphe : le BADABOUM n’est pas un bar à cocktail, ce n’est pas non plus un club ou une salle de concert, c’est encore moins une garçonnière cachée au premier étage… Le Badaboum c’est tout ça à la fois ! Concerts détonants, Dancefloor agité, Cocktails maison et Snack revisité : un endroit où l’on se sent bien à toute heure que l’on aime écouter, danser ou juste s’aimer...\n19h00 Cocktail Bar / 23h30 Club\nwww.badaboum.paris\n2 bis rue des Taillandiers - Paris 11\n M°Bastille ou Ledru Rollin\nCLUB MEMBER\nwww.badaboum.paris/nl.php\npOUR RENTRER\nAvec Chauffeur-Privé\n1ère course offerte (max 15 euros) avec le code NOVA - http://po.st/A4PiY6"
         }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
