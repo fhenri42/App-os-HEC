@@ -13,9 +13,10 @@ class TestViewController: UIViewController {
    var new : UIImage?
     
     
+    
     @IBOutlet var test: UINavigationItem!
-    @IBOutlet weak var My_image: UIButton!
     @IBOutlet weak var My_text: UITextView!
+    @IBOutlet var My_image: UIImageView!
     
     override func viewDidLoad()
     {
@@ -31,7 +32,7 @@ class TestViewController: UIViewController {
         {
             new = logoImages[y]
         }
-        My_image.setImage(new, forState: UIControlState.Normal)
+        My_image.image = new
         super.viewDidLoad()
    
         

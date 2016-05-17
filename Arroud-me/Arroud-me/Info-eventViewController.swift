@@ -24,8 +24,8 @@ class Info_eventViewController: UIViewController, CLLocationManagerDelegate, MKM
 {
     @IBOutlet var My_map: MKMapView!
     @IBOutlet weak var My_seg: UISegmentedControl!
-    @IBOutlet weak var My_image: UIButton!
-    
+    @IBOutlet var My_image: UIButton!
+
     @IBOutlet var test: UINavigationItem!
 
     var locationManager = CLLocationManager()

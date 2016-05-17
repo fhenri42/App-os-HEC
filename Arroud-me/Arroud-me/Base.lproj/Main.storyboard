@@ -81,31 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CGn-ch-VXH">
-                                <rect key="frame" x="186" y="267" width="229" height="29"/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="229" id="OmG-sk-4C5"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Standard"/>
-                                    <segment title="Hybride"/>
-                                    <segment title="Satellite"/>
-                                </segments>
-                                <color key="tintColor" red="0.3220890941814023" green="0.67875346450058216" blue="0.94162660256410258" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="My_switch:" destination="gHG-Do-rqs" eventType="valueChanged" id="ygn-YB-k1v"/>
-                                </connections>
-                            </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-25-Vql">
-                                <rect key="frame" x="246" y="13" width="109" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="WQj-Rk-klB"/>
-                                    <constraint firstAttribute="width" constant="109" id="zi1-vp-wr2"/>
-                                </constraints>
-                            </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-pj-8hS">
-                                <rect key="frame" x="20" y="303" width="560" height="156"/>
+                                <rect key="frame" x="0.0" y="293" width="600" height="166"/>
                             </mapView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rja-le-MDn">
                                 <rect key="frame" x="20" y="461" width="580" height="178"/>
@@ -261,36 +238,56 @@
                                     <action selector="where_func:" destination="gHG-Do-rqs" eventType="touchUpInside" id="F1T-CF-ZdK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l7-FT-Cy7">
-                                <rect key="frame" x="20" y="96" width="560" height="163"/>
-                                <state key="normal" backgroundImage="Du dimanche"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-25-Vql">
+                                <rect key="frame" x="246" y="13" width="109" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="WQj-Rk-klB"/>
+                                    <constraint firstAttribute="width" constant="109" id="zi1-vp-wr2"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CGn-ch-VXH">
+                                <rect key="frame" x="88" y="262" width="425" height="29"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="425" id="OmG-sk-4C5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="car"/>
+                                    <segment title="public transportation"/>
+                                    <segment title="pedestrian"/>
+                                </segments>
+                                <color key="tintColor" red="0.3220890941814023" green="0.67875346450058216" blue="0.94162660256410258" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="POn-HW-Ezv" kind="show" id="NBs-eV-ZEJ"/>
+                                    <action selector="My_switch:" destination="gHG-Do-rqs" eventType="valueChanged" id="ygn-YB-k1v"/>
                                 </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsC-Zq-flt">
+                                <rect key="frame" x="20" y="72" width="560" height="182"/>
+                                <state key="normal" backgroundImage="Paris festival"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mvC-pj-8hS" firstAttribute="leading" secondItem="HMG-Mw-NIa" secondAttribute="leading" constant="20" id="1AC-7h-Ylb"/>
-                            <constraint firstItem="rja-le-MDn" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" id="AJ6-64-ZmS"/>
-                            <constraint firstItem="5l7-FT-Cy7" firstAttribute="top" secondItem="WTb-25-Vql" secondAttribute="bottom" constant="48" id="Ay2-OS-yig"/>
-                            <constraint firstItem="CGn-ch-VXH" firstAttribute="trailing" secondItem="WTb-25-Vql" secondAttribute="trailing" constant="60" id="BVz-lt-4MA"/>
+                            <constraint firstItem="mvC-pj-8hS" firstAttribute="leading" secondItem="HMG-Mw-NIa" secondAttribute="leading" id="1AC-7h-Ylb"/>
+                            <constraint firstItem="rja-le-MDn" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" constant="20" id="AJ6-64-ZmS"/>
+                            <constraint firstItem="CGn-ch-VXH" firstAttribute="trailing" secondItem="WTb-25-Vql" secondAttribute="trailing" constant="158" id="BVz-lt-4MA"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="bottom" secondItem="zcf-J9-Y3t" secondAttribute="top" constant="39" id="DNZ-KI-toh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UsC-Zq-flt" secondAttribute="trailing" id="Hgf-bO-hDM"/>
+                            <constraint firstItem="UsC-Zq-flt" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" constant="20" id="Iac-ig-e9C"/>
                             <constraint firstItem="WTb-25-Vql" firstAttribute="top" secondItem="HMG-Mw-NIa" secondAttribute="top" constant="13" id="JYV-22-7mK"/>
                             <constraint firstItem="zcf-J9-Y3t" firstAttribute="top" secondItem="mvC-pj-8hS" secondAttribute="bottom" constant="141" id="NIn-Ve-1wl"/>
-                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="5l7-FT-Cy7" secondAttribute="bottom" constant="8" id="Rp4-0S-i1H"/>
-                            <constraint firstItem="5l7-FT-Cy7" firstAttribute="trailing" secondItem="mvC-pj-8hS" secondAttribute="trailing" id="TIb-er-fBf"/>
-                            <constraint firstItem="5l7-FT-Cy7" firstAttribute="leading" secondItem="mvC-pj-8hS" secondAttribute="leading" id="Yc9-f9-T1r"/>
+                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="UsC-Zq-flt" secondAttribute="bottom" constant="8" id="Smg-ZT-Edq"/>
+                            <constraint firstItem="UsC-Zq-flt" firstAttribute="top" secondItem="WTb-25-Vql" secondAttribute="bottom" constant="24" id="Y9Q-R2-eeV"/>
                             <constraint firstAttribute="trailing" secondItem="QJG-rO-VmR" secondAttribute="trailing" constant="51" id="ZwW-Ye-nWt"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="top" secondItem="chH-1X-QXz" secondAttribute="bottom" constant="8" id="cFq-S1-7Dc"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="top" secondItem="QJG-rO-VmR" secondAttribute="bottom" constant="8" id="f1e-3h-AIw"/>
-                            <constraint firstItem="mvC-pj-8hS" firstAttribute="top" secondItem="CGn-ch-VXH" secondAttribute="bottom" constant="8" id="g2J-pK-Up2"/>
+                            <constraint firstItem="mvC-pj-8hS" firstAttribute="top" secondItem="CGn-ch-VXH" secondAttribute="bottom" constant="3" id="g2J-pK-Up2"/>
                             <constraint firstItem="QJG-rO-VmR" firstAttribute="centerY" secondItem="chH-1X-QXz" secondAttribute="centerY" constant="-0.5" id="if6-dE-Dqq"/>
-                            <constraint firstItem="rja-le-MDn" firstAttribute="trailing" secondItem="mvC-pj-8hS" secondAttribute="trailing" constant="20" id="k5o-gB-IhP"/>
+                            <constraint firstItem="rja-le-MDn" firstAttribute="trailing" secondItem="mvC-pj-8hS" secondAttribute="trailing" id="k5o-gB-IhP"/>
                             <constraint firstItem="WTb-25-Vql" firstAttribute="centerX" secondItem="HMG-Mw-NIa" secondAttribute="centerX" id="kUB-qE-Ufu"/>
                             <constraint firstItem="chH-1X-QXz" firstAttribute="leading" secondItem="QJG-rO-VmR" secondAttribute="trailing" constant="8" id="kUy-Yf-vjq"/>
                             <constraint firstItem="rja-le-MDn" firstAttribute="top" secondItem="mvC-pj-8hS" secondAttribute="bottom" constant="2" id="l6K-NE-eCt"/>
-                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="HMG-Mw-NIa" secondAttribute="top" constant="267" id="lTx-Cg-SEQ"/>
+                            <constraint firstItem="CGn-ch-VXH" firstAttribute="top" secondItem="HMG-Mw-NIa" secondAttribute="top" constant="262" id="lTx-Cg-SEQ"/>
                             <constraint firstItem="mvC-pj-8hS" firstAttribute="centerX" secondItem="WTb-25-Vql" secondAttribute="centerX" id="wB0-t2-wme"/>
                         </constraints>
                     </view>
@@ -317,7 +314,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="My_image" destination="5l7-FT-Cy7" id="ZKX-tG-qgV"/>
+                        <outlet property="My_image" destination="UsC-Zq-flt" id="A6w-by-v7m"/>
                         <outlet property="My_map" destination="mvC-pj-8hS" id="QCX-c4-zTn"/>
                         <outlet property="My_seg" destination="CGn-ch-VXH" id="uzD-Yk-lKm"/>
                         <outlet property="test" destination="fSU-v3-jxL" id="hBb-9J-wWe"/>
@@ -339,15 +336,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLI-24-R03">
-                                <rect key="frame" x="0.0" y="28" width="600" height="239"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239" id="Ibz-bY-Mgk"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Du dimanche"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ql6-Hw-qZj">
-                                <rect key="frame" x="20" y="275" width="560" height="229"/>
+                                <rect key="frame" x="20" y="292" width="560" height="229"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="229" id="xpT-Fc-m9H"/>
@@ -372,10 +362,17 @@ Venez nombreux!</string>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-Tk-J19">
+                                <rect key="frame" x="0.0" y="38" width="600" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="WMb-2V-fRR"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-xP-ELt">
-                                <rect key="frame" x="261" y="512" width="79" height="79"/>
+                                <rect key="frame" x="261" y="513" width="79" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="aBj-L0-fiV"/>
+                                    <constraint firstAttribute="height" constant="79" id="n2v-b0-DaR"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Logo-go"/>
                                 <connections>
@@ -385,22 +382,21 @@ Venez nombreux!</string>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EhN-xP-ELt" firstAttribute="top" secondItem="ql6-Hw-qZj" secondAttribute="bottom" constant="8" symbolic="YES" id="4gF-2w-n47"/>
-                            <constraint firstItem="ql6-Hw-qZj" firstAttribute="centerX" secondItem="YLI-24-R03" secondAttribute="centerX" id="Bwk-6h-t8i"/>
-                            <constraint firstItem="8VJ-ce-V8x" firstAttribute="top" secondItem="YLI-24-R03" secondAttribute="bottom" constant="333" id="EJG-WQ-oWW"/>
-                            <constraint firstItem="8VJ-ce-V8x" firstAttribute="top" secondItem="EhN-xP-ELt" secondAttribute="bottom" constant="9" id="IGE-g8-WCO"/>
-                            <constraint firstItem="EhN-xP-ELt" firstAttribute="centerX" secondItem="ql6-Hw-qZj" secondAttribute="centerX" id="QcN-qf-BUx"/>
-                            <constraint firstItem="YLI-24-R03" firstAttribute="centerX" secondItem="5gL-mD-6DF" secondAttribute="centerX" id="YdH-st-Pge"/>
-                            <constraint firstItem="YLI-24-R03" firstAttribute="leading" secondItem="5gL-mD-6DF" secondAttribute="leadingMargin" constant="-20" id="b2t-E2-cLH"/>
-                            <constraint firstItem="ql6-Hw-qZj" firstAttribute="leading" secondItem="5gL-mD-6DF" secondAttribute="leadingMargin" id="gD3-my-O3d"/>
-                            <constraint firstItem="ql6-Hw-qZj" firstAttribute="top" secondItem="YLI-24-R03" secondAttribute="bottom" constant="8" id="j0f-Oi-Hom"/>
+                            <constraint firstItem="fHJ-Tk-J19" firstAttribute="centerX" secondItem="ql6-Hw-qZj" secondAttribute="centerX" id="0q4-i5-L6T"/>
+                            <constraint firstItem="fHJ-Tk-J19" firstAttribute="top" secondItem="T3z-ug-JrP" secondAttribute="bottom" constant="18" id="E5D-qf-Jhi"/>
+                            <constraint firstItem="fHJ-Tk-J19" firstAttribute="centerX" secondItem="EhN-xP-ELt" secondAttribute="centerX" id="Ns8-Bj-ht3"/>
+                            <constraint firstAttribute="trailing" secondItem="fHJ-Tk-J19" secondAttribute="trailing" id="XEA-nx-059"/>
+                            <constraint firstItem="8VJ-ce-V8x" firstAttribute="top" secondItem="EhN-xP-ELt" secondAttribute="bottom" constant="8" symbolic="YES" id="hEW-8W-Dw1"/>
+                            <constraint firstItem="fHJ-Tk-J19" firstAttribute="leading" secondItem="5gL-mD-6DF" secondAttribute="leading" id="ljO-lj-ioq"/>
+                            <constraint firstItem="ql6-Hw-qZj" firstAttribute="top" secondItem="fHJ-Tk-J19" secondAttribute="bottom" constant="15" id="vBX-sq-TZZ"/>
+                            <constraint firstItem="ql6-Hw-qZj" firstAttribute="leading" secondItem="5gL-mD-6DF" secondAttribute="leadingMargin" id="wQ9-xW-qz5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="mgU-p8-XyT"/>
+                    <navigationItem key="navigationItem" title="Title" id="bS3-w2-Qv5"/>
                     <connections>
-                        <outlet property="My_image" destination="YLI-24-R03" id="yXa-pR-sFP"/>
+                        <outlet property="My_image" destination="fHJ-Tk-J19" id="6Hy-ir-WD8"/>
                         <outlet property="My_text" destination="ql6-Hw-qZj" id="MUO-i3-X9u"/>
-                        <outlet property="test" destination="mgU-p8-XyT" id="D0L-wB-iJC"/>
+                        <outlet property="test" destination="bS3-w2-Qv5" id="QJv-YW-8vb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3h9-mb-2EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,21 +431,18 @@ Venez nombreux!</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-oR-Upa">
-                                <rect key="frame" x="254" y="465" width="92" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="9qz-3N-Gxf"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Logo-go"/>
-                                <connections>
-                                    <action selector="Go_func:" destination="ATD-CH-kwo" eventType="touchUpInside" id="Ex9-Ye-ZGh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-Lq-bOw">
                                 <rect key="frame" x="20" y="465" width="83" height="83"/>
                                 <state key="normal" backgroundImage="dislike"/>
                                 <connections>
                                     <action selector="DislikeFunc:" destination="ATD-CH-kwo" eventType="touchUpInside" id="RO3-sv-bLa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-Sd-ACu">
+                                <rect key="frame" x="497" y="465" width="83" height="83"/>
+                                <state key="normal" backgroundImage="like"/>
+                                <connections>
+                                    <action selector="Likefunc:" destination="ATD-CH-kwo" eventType="touchUpInside" id="jlf-7p-GZo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-7N-dQp">
@@ -464,11 +457,14 @@ Venez nombreux!</string>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-Sd-ACu">
-                                <rect key="frame" x="497" y="465" width="83" height="83"/>
-                                <state key="normal" backgroundImage="like"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-oR-Upa">
+                                <rect key="frame" x="254" y="465" width="92" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="9qz-3N-Gxf"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Logo-go"/>
                                 <connections>
-                                    <action selector="Likefunc:" destination="ATD-CH-kwo" eventType="touchUpInside" id="jlf-7p-GZo"/>
+                                    <action selector="Go_func:" destination="ATD-CH-kwo" eventType="touchUpInside" id="Ex9-Ye-ZGh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -646,9 +642,9 @@ Venez nombreux!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Du dimanche" width="320" height="213"/>
         <image name="Go-favo" width="83" height="83"/>
         <image name="Logo-go" width="125" height="125"/>
+        <image name="Paris festival" width="406" height="154"/>
         <image name="Poubelle" width="83" height="83"/>
         <image name="arraow" width="83" height="83"/>
         <image name="background" width="225" height="150"/>
@@ -663,9 +659,8 @@ Venez nombreux!</string>
         <image name="tete7" width="66" height="66"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NBs-eV-ZEJ"/>
-        <segue reference="3Fd-mC-Bb1"/>
         <segue reference="5yf-TU-RM3"/>
+        <segue reference="3Fd-mC-Bb1"/>
         <segue reference="Ayg-ru-wdO"/>
     </inferredMetricsTieBreakers>
 </document>

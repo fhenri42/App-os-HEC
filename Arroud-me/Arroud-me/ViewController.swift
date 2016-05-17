@@ -66,6 +66,7 @@ class ViewController: UIViewController
         //let imageView = UIImageView(image:logo)
         imageView.image = logo
         self.test.titleView = imageView
+      //  self.navigationController.navigationBar.setBackgroundImage(logo,forBarMetrics: .Default)
         
         
         Open.target = self.revealViewController()
